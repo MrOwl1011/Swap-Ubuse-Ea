@@ -1,0 +1,70 @@
+; Friday swap, simple: LIVE TRADING ON
+; One position on the chart symbol, Friday only, entered 60-50 minutes before the market close,
+; in the direction with positive swap (if it beats costs and risk limits). Closed Monday after reopen.
+; === Mode ===
+EnableTrading=true
+AnalysisOnlyMode=false
+EnableFridayStrategy=true
+EnableSwapScanner=false
+EnableMidweekRollover=false
+MidweekTripleSwapOnly=true
+; === Symbols ===
+SymbolsToScan=CURRENT
+MaxSymbolsToScan=60
+; === Position sizing ===
+FixedLotSize=0.01
+UseRiskBasedSizing=false
+RiskPercent=0.5
+MinimumNetSwapAdvantage=1.0
+RequireOppositeSwapSigns=true
+; === Friday / rollover timing (broker server time) ===
+FridayPreparationMinutes=60
+FridayEntryCutoffMinutes=50
+RolloverTimeOffsetMinutes=0
+HoldRollovers=1
+ExitMode=0
+ExitDelayMinutes=15
+ExitMaxWaitMinutes=120
+; === Costs and market filters ===
+MaximumSpread=50
+ExitSpreadMultiplier=2.0
+CommissionPerLotRoundTrip=0.0
+AutoDetectCommission=true
+OtherCostsPerLot=0.0
+MaxQuoteAgeSeconds=120
+MinTicksLast5Min=0
+; === Risk limits ===
+MaximumWeekendLoss=100.0
+MaximumTotalLots=0.10
+MaximumOpenPositions=1
+MaxMarginUsePercent=30.0
+GapLookbackWeeks=52
+GapPercentile=95.0
+GapRiskMultiplier=1.0
+MinStressPercentOfPrice=0.3
+CloseIfSwapTurnsNegative=true
+ReduceToLimits=true
+; === Trend filter ===
+UseTrendFilter=false
+TrendTimeframe=16388
+TrendFastPeriod=20
+TrendSlowPeriod=50
+; === Stops (do NOT protect against gaps) ===
+UseStopLoss=false
+StopLossPoints=3000
+UseTakeProfit=false
+TakeProfitPoints=3000
+; === Execution ===
+MagicNumber=20261009
+MaximumSlippage=30
+TimerSeconds=5
+ScanIntervalSeconds=60
+; === Dashboard and logging ===
+ShowDashboard=true
+DashboardRows=12
+DashboardX=10
+DashboardY=25
+DashboardFontSize=9
+WriteCsvLogs=true
+VerboseLogging=false
+OptimizationCriterion=2
