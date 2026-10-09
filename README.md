@@ -28,6 +28,7 @@ MQL5/
   Presets/
     SwapAbuseEA_Analysis.set   safe default: scanner and dashboard only
     SwapAbuseEA_Backtest_XAUUSD.set  Friday weekend test on gold with trading enabled
+    SwapAbuseEA_Friday_1H_Live.set   LIVE: one position on the chart symbol, Friday only, entered 60-50 min before close
 docs/
   ARCHITECTURE.md              how it works and the swap maths
   BACKTESTING.md               test plan, optimisation ranges, recommended initial settings
